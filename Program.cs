@@ -20,15 +20,18 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 // Email Service (will be used later when configured)
 builder.Services.AddScoped<EmailService>();
 
-// CORS - Allow React frontend
+// CORS - Allow React frontend (local and production)
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowReactApp", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
-              .AllowAnyHeader()
-              .AllowAnyMethod()
-              .AllowCredentials();
+        policy.WithOrigins(
+            "http://localhost:3000",
+            "https://jcam.netlify.app"
+        )
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowCredentials();
     });
 });
 
