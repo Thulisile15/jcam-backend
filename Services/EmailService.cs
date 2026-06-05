@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
+using System.Text.Json;
 
 namespace JCAM_CONNECT.Services
 {
@@ -17,6 +18,38 @@ namespace JCAM_CONNECT.Services
         {
             try
             {
+                // Try Resend API first (works on Render free tier)
+                var resendApiKey = _configuration["Resend:ApiKey"];
+
+                if (!string.IsNullOrEmpty(resendApiKey))
+                {
+                    using var client = new HttpClient();
+                    client.DefaultRequestHeaders.Add("Authorization", $"Bearer {resendApiKey}");
+
+                    var emailData = new
+                    {
+                        from = "JCAM Ministries <onboarding@resend.dev>",
+                        to = new[] { toEmail },
+                        subject = subject,
+                        html = body
+                    };
+
+                    var json = JsonSerializer.Serialize(emailData);
+                    var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+                    var response = await client.PostAsync("https://api.resend.com/emails", content);
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        Console.WriteLine($"Email sent successfully via Resend to {toEmail}");
+                        return;
+                    }
+
+                    var error = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Resend failed: {error}");
+                }
+
+                // Fallback to Gmail SMTP (if Resend fails or not configured)
                 var emailSettings = _configuration.GetSection("EmailSettings");
                 var host = emailSettings["Host"];
                 var portStr = emailSettings["Port"];
@@ -25,37 +58,37 @@ namespace JCAM_CONNECT.Services
                 var fromEmail = emailSettings["FromEmail"];
                 var fromName = emailSettings["FromName"];
 
-                // Check if email settings are configured
-                if (string.IsNullOrEmpty(host) || string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                if (!string.IsNullOrEmpty(host) && !string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password))
                 {
-                    Console.WriteLine("Email settings not configured. Skipping email send.");
+                    int port = int.Parse(portStr ?? "587");
+
+                    using var smtpClient = new SmtpClient(host, port);
+                    smtpClient.Credentials = new NetworkCredential(username, password);
+                    smtpClient.EnableSsl = true;
+
+                    var mailMessage = new MailMessage
+                    {
+                        From = new MailAddress(fromEmail ?? username, fromName ?? "JCAM Ministries"),
+                        Subject = subject,
+                        Body = body,
+                        IsBodyHtml = true
+                    };
+                    mailMessage.To.Add(toEmail);
+
+                    await smtpClient.SendMailAsync(mailMessage);
+                    Console.WriteLine($"Email sent successfully via Gmail to {toEmail}");
                     return;
                 }
 
-                int port = int.Parse(portStr ?? "587");
-
-                using var client = new SmtpClient(host, port);
-                client.Credentials = new NetworkCredential(username, password);
-                client.EnableSsl = true;
-
-                var mailMessage = new MailMessage
-                {
-                    From = new MailAddress(fromEmail ?? username, fromName ?? "JCAM Ministries"),
-                    Subject = subject,
-                    Body = body,
-                    IsBodyHtml = true
-                };
-                mailMessage.To.Add(toEmail);
-
-                await client.SendMailAsync(mailMessage);
-                Console.WriteLine($"Email sent successfully to {toEmail}");
+                Console.WriteLine("No email service configured. Skipping email send.");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Email sending failed: {ex.Message}");
-                // Don't throw - just log the error
             }
         }
+
+        // ========== ALL YOUR TEMPLATE METHODS BELOW - COMPLETELY UNCHANGED ==========
 
         public string GetTestimonyReceivedTemplate(string name)
         {
