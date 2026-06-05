@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "Hash": "eJhsc7nQ8uuxAOnx3Wxl8RqZ1quVkDc7lMcEbTv2OUg=",
+  "Source": "JCAM CONNECT",
+  "BasePath": "_content/JCAM CONNECT",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "JCAM CONNECT\\wwwroot",
+      "Source": "JCAM CONNECT",
+      "ContentRoot": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\",
+      "BasePath": "_content/JCAM CONNECT",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\0afec4ba-6760-4d0e-a5c3-c07a80caa873_qualification certificate.pdf",
+      "SourceId": "JCAM CONNECT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\",
+      "BasePath": "_content/JCAM CONNECT",
+      "RelativePath": "uploads/testimonies/0afec4ba-6760-4d0e-a5c3-c07a80caa873_qualification certificate.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\testimonies\\0afec4ba-6760-4d0e-a5c3-c07a80caa873_qualification certificate.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\48f20335-d13a-4e30-acbb-2479306c8ab0_qualification certificate.pdf",
+      "SourceId": "JCAM CONNECT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\",
+      "BasePath": "_content/JCAM CONNECT",
+      "RelativePath": "uploads/testimonies/48f20335-d13a-4e30-acbb-2479306c8ab0_qualification certificate.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\testimonies\\48f20335-d13a-4e30-acbb-2479306c8ab0_qualification certificate.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\85609ec3-63b6-49dd-a1af-422fdc626977_qualification certificate.pdf",
+      "SourceId": "JCAM CONNECT",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\",
+      "BasePath": "_content/JCAM CONNECT",
+      "RelativePath": "uploads/testimonies/85609ec3-63b6-49dd-a1af-422fdc626977_qualification certificate.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\testimonies\\85609ec3-63b6-49dd-a1af-422fdc626977_qualification certificate.pdf"
+    }
+  ]
+}

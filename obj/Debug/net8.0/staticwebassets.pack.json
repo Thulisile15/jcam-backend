@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\0afec4ba-6760-4d0e-a5c3-c07a80caa873_qualification certificate.pdf",
+      "PackagePath": "staticwebassets\\uploads\\testimonies\\0afec4ba-6760-4d0e-a5c3-c07a80caa873_qualification certificate.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\48f20335-d13a-4e30-acbb-2479306c8ab0_qualification certificate.pdf",
+      "PackagePath": "staticwebassets\\uploads\\testimonies\\48f20335-d13a-4e30-acbb-2479306c8ab0_qualification certificate.pdf"
+    },
+    {
+      "Id": "C:\\Users\\Thulisile Angel Malu\\Documents\\JCAM WEB\\JCAM CONNECT\\JCAM CONNECT\\wwwroot\\uploads\\testimonies\\85609ec3-63b6-49dd-a1af-422fdc626977_qualification certificate.pdf",
+      "PackagePath": "staticwebassets\\uploads\\testimonies\\85609ec3-63b6-49dd-a1af-422fdc626977_qualification certificate.pdf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.JCAM CONNECT.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.JCAM CONNECT.props",
+      "PackagePath": "build\\JCAM CONNECT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.JCAM CONNECT.props",
+      "PackagePath": "buildMultiTargeting\\JCAM CONNECT.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.JCAM CONNECT.props",
+      "PackagePath": "buildTransitive\\JCAM CONNECT.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

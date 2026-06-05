@@ -1,0 +1,6 @@
+@JCAM_CONNECT_HostAddress = http://localhost:5047
+
+GET {{JCAM_CONNECT_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
