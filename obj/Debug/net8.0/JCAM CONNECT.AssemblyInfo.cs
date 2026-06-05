@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("JCAM CONNECT")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94c20580a5f4d51d5bb9f5f457c20ed3b4be8825")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aebe2f62d5f7a8a8f57f93f2c177ffb4f97b0088")]
 [assembly: System.Reflection.AssemblyProductAttribute("JCAM CONNECT")]
 [assembly: System.Reflection.AssemblyTitleAttribute("JCAM CONNECT")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
