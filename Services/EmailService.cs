@@ -28,7 +28,7 @@ namespace JCAM_CONNECT.Services
 
                     var emailData = new
                     {
-                        from = "JCAM Ministries <onboarding@resend.dev>",
+                       from = "JCAM Ministries <hello@jcaministries.co.za>",
                         to = new[] { toEmail },
                         subject = subject,
                         html = body
