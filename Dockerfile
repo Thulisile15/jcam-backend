@@ -5,10 +5,9 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["JCAM CONNECT/JCAM CONNECT.csproj", "JCAM CONNECT/"]
-RUN dotnet restore "JCAM CONNECT/JCAM CONNECT.csproj"
+COPY ["JCAM CONNECT.csproj", "."]
+RUN dotnet restore "JCAM CONNECT.csproj"
 COPY . .
-WORKDIR "/src/JCAM CONNECT"
 RUN dotnet build "JCAM CONNECT.csproj" -c Release -o /app/build
 
 FROM build AS publish
